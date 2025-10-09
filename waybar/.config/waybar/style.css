@@ -12,7 +12,8 @@
 #clock,
 #memory,
 #custom-launcher,
-#custom-media {
+#custom-media,
+#workspaces {
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
   margin-left: 0.5rem;
@@ -41,8 +42,8 @@ window#waybar.hidden {
 #workspaces {
   font-size: 20px;
 
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-left: 0;
+  padding: 0.25rem;
 
   background: #1d2021;
   border: 1px solid #ebdbb2;
@@ -129,7 +130,7 @@ window#waybar.hidden {
   font-size: 20px;
   color: #fe8019;
   background: #1d2021;
-  border-color: #ebdbb2;
+  border-color: #fe8019;
 }
 
 #custom-media {

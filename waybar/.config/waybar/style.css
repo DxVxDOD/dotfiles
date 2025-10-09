@@ -1,0 +1,138 @@
+/* The original colour is the one one the border colour for the modules */
+* {
+  font-family: "Iosevka Nerd Font", "Noto Color Emoji";
+}
+
+#general,
+#cpu,
+#network,
+#wireplumber,
+#battery,
+#backlight,
+#clock,
+#memory,
+#custom-launcher,
+#custom-media {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.5rem;
+
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+
+  border: 1px solid white
+}
+
+window#waybar {
+  background: transparent;
+}
+
+window#waybar.hidden {
+  opacity: 0.2;
+}
+
+#window {
+  color: transparent;
+  background: transparent;
+}
+
+#workspaces {
+  font-size: 20px;
+
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  background: #1d2021;
+  border: 1px solid #ebdbb2;
+}
+
+#workspaces button {
+  color: #ebdbb2;
+  background: transparent;
+  border-radius: 2px;
+}
+
+#workspaces button.active {
+  color: #fe8019;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  color: #af3a03;
+  border-color: #af3a03;
+}
+
+#network {
+  background: #1a0c0b;
+  color: #ffe5e1;
+  border-color: #fb4934; 
+}
+
+#wireplumber {
+  color: #ead6e4;
+  background: #1f0d16;
+  border-color: #d3869b;
+}
+
+#battery {
+  color: #d1e4e5;
+  background: #131e1f;
+  border-color: #83a598;
+}
+
+#battery.critical:not(.charging) {
+  background-color: #b5e8e0;
+  color: #161320;
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    background-color: #bf616a;
+    color: #b5e8e0;
+  }
+}
+
+#backlight {
+  background: #1f2622;
+  color: #d6e9e0;
+  border-color: #8ec07c;
+}
+
+#clock {
+  background: #321f13;
+  color: #ffe0d1;
+  border-color: #fe8019;
+  margin-right: 0.5rem;
+}
+
+#memory {
+  background: #322813;
+  color: #ffebd1;
+  border-color: #fabd2f;
+}
+
+#cpu {
+  background: #191a0d;
+  color: #e5e9d1;
+  border-color: #b8bb26;
+}
+
+#custom-launcher {
+  font-size: 20px;
+  color: #fe8019;
+  background: #1d2021;
+  border-color: #ebdbb2;
+}
+
+#custom-media {
+  color: #161320;
+  background: #f2cdcd;
+}

@@ -1,12 +1,13 @@
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
+  lazy = false,
   config = function()
-    require("nvim-treesitter.configs").setup({
-      -- Auto-install parsers when entering a buffer
-      auto_install = true,
+    local treesitter = require("nvim-treesitter.config")
 
-      -- List of parsers to ensure are installed
+    treesitter.setup({
+
+      auto_install = true,
       ensure_installed = {
         "lua",
         "vim",
@@ -19,21 +20,20 @@ return {
         "json",
         "markdown",
         "bash",
-        -- Add any other languages you use
+        "tsx",
+        "regex",
+        "scss",
       },
 
-      -- Enable syntax highlighting
       highlight = {
         enable = true,
         additional_vim_regex_highlighting = false,
       },
 
-      -- Enable indentation
       indent = {
         enable = true,
       },
 
-      -- Enable incremental selection
       incremental_selection = {
         enable = true,
         keymaps = {

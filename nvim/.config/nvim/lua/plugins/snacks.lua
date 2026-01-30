@@ -2,6 +2,22 @@ return {
   "snacks.nvim",
   opts = {
     bigfile = { enabled = true },
+    picker = {
+      sources = {
+        files = {
+          hidden = true,
+          ignored = false,
+        },
+        explorer = {
+          hidden = true,
+          ignored = false,
+        },
+      },
+    },
+    explorer = {
+      hidden = true,
+      ignored = false,
+    },
     dashboard = {
       sections = {
         { section = "header" },
@@ -35,7 +51,7 @@ return {
     quickfile = { enabled = true },
     styles = {
       notification = {
-        wo = { wrap = true }, -- Wrap notifications
+        wo = { wrap = true },
       },
     },
   },

@@ -1,17 +1,26 @@
 return {
+  -- {
+  --   "AlexvZyl/nordic.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("nordic").load()
+  --   end,
+  -- },
   {
-    "AlexvZyl/nordic.nvim",
+    "EdenEast/nightfox.nvim",
     lazy = false,
     priority = 1000,
     config = function()
-      require("nordic").load()
+      require("nightfox.config").set_fox("nordfox")
+      require("nightfox").load()
     end,
   },
-  -- Configure LazyVim to load gruvbox
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "nordic",
-    },
-  },
+  -- { "EdenEast/nightfox.nvim" },
+  --   {
+  --     "LazyVim/LazyVim",
+  --     opts = {
+  --       colorscheme = "nightfox",
+  --     },
+  --   },
 }

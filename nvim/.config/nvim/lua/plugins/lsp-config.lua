@@ -4,7 +4,6 @@ return {
   opts = {
     ---@type lspconfig.options
     servers = {
-      somesass = {},
       cssmodules_ls = {},
       css_variables = {},
       cssls = {},

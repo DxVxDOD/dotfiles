@@ -1,26 +1,18 @@
+-- lua/plugins/colorscheme.lua
 return {
-  -- {
-  --   "AlexvZyl/nordic.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   config = function()
-  --     require("nordic").load()
-  --   end,
-  -- },
   {
-    "EdenEast/nightfox.nvim",
+    "sainnhe/gruvbox-material",
     lazy = false,
     priority = 1000,
     config = function()
-      require("nightfox.config").set_fox("nordfox")
-      require("nightfox").load()
+      vim.g.gruvbox_material_enable_italic = true
+      vim.cmd.colorscheme("gruvbox-material")
+
+      vim.api.nvim_set_hl(0, "@keyword", { bold = true })
+      vim.api.nvim_set_hl(0, "@keyword.function", { bold = true })
+      vim.api.nvim_set_hl(0, "@comment", { italic = true })
+      vim.api.nvim_set_hl(0, "@type", { italic = true })
+      vim.api.nvim_set_hl(0, "@lsp.type.function", { bold = true })
     end,
   },
-  -- { "EdenEast/nightfox.nvim" },
-  --   {
-  --     "LazyVim/LazyVim",
-  --     opts = {
-  --       colorscheme = "nightfox",
-  --     },
-  --   },
 }
